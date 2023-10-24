@@ -4,7 +4,7 @@
 
 let numbers = [1, 2, 3, 4, 5]
 
-function solution(numbers) {
+function solution1(numbers) {
     var answer = [];
 
     for (let i = 0; i < numbers.length; i++) {
@@ -14,5 +14,22 @@ function solution(numbers) {
     return answer;
 }
 
-console.log(solution(numbers));
 
+
+// reduce 사용법
+function solution2(numbers) {
+    return numbers.reduce((a, b) => [...a, b * 2], []);
+}
+// 초기값을 [] 배열로 만들고
+// a (accmulator)에 누적
+// b (currentValue)는 기존 배열을 받아와서 
+// 차례대로 * 2를 한다.
+// 나온 값을 ...(spread operator)로 풀어서
+// 초기값 [] 배열에 전달
+
+// map 사용법
+const solution3 = numbers.map((number) => number * 2)
+// map() 함수는 값과 인덱스를 받아
+// 자동으로 for문을 돌려 값을 빼도록 해준다.
+
+console.log(solution3);
