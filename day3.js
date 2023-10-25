@@ -31,5 +31,6 @@ function solution2(numbers) {
 const solution3 = numbers.map((number) => number * 2)
 // map() 함수는 값과 인덱스를 받아
 // 자동으로 for문을 돌려 값을 빼도록 해준다.
+// map 함수는 기존 배열을 변경하지 않고 새로운 배열을 생성한다
 
 console.log(solution3);
