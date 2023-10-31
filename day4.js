@@ -11,3 +11,6 @@ function solution (num1, num2) {
 
 console.log(solution(num1, num2));
 
+// 해설
+const solution = (num1, num2) => num1 % num2
+// 화살표 함수가 익숙해질 필요가 있다 !!
