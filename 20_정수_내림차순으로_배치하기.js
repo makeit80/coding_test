@@ -9,7 +9,6 @@ function solution (n) {
     .split('') 
     .sort((a, b) => b - a) 
     .reduce((a, b) => [a + b])*1
-    
 }
 
 console.log(solution(n))
@@ -20,5 +19,5 @@ console.log(solution(n))
 //     return (n+'') // String
 //     .split('') // ['1', '1', '8', '3', '7', '2']
 //     .sort((a, b) => b - a) // ['8', '7', '3', '2', '1', '1']
-//     .reduce((a, b) => [parseInt(a + b)])[0] // [873211] => 873211
+//     .reduce((a, b) => [parseInt(a + b)])*1 // [873211] => 873211
 // }
