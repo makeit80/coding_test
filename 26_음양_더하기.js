@@ -9,14 +9,14 @@ const absolutes = [5, 2, 3];
 const signs = [false, false, true];
 
 function solution (absolutes, signs) {
-    return absolutes
-    .map((item, i) => signs[i] ? item : -item)
-    .reduce((_, e) => _ + e)
+    // return absolutes
+    // .map((item, i) => signs[i] ? item : -item)
+    // .reduce((_, e) => _ + e)
 
-    // return absolutes.reduce((_, e, i) => {
-    //     console.log(signs[i])
-    //     return signs[i] ? _ + e : _ - e
-    // })
+    return absolutes.reduce((_, e, i) => {
+        console.log(signs[i])
+        return signs[i] ? _ + e : _ - e
+    })
 }
 
 console.log(solution(absolutes, signs))
