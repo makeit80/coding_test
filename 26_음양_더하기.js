@@ -14,7 +14,6 @@ function solution (absolutes, signs) {
     // .reduce((_, e) => _ + e)
 
     return absolutes.reduce((_, e, i) => {
-        console.log(signs[i])
         return signs[i] ? _ + e : _ - e
     })
 }
