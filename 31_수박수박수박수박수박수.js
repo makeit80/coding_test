@@ -10,5 +10,9 @@ const solution = (n) =>
     Array
     .from({length: n}, (_, i) => i % 2 ? '박' : '수')
     .join("")
-
+    
 console.log(solution(n))
+
+
+// 다른 사람의 풀이
+var waterMelon = n =>'수박'.repeat(n/2) + (n%2 === 1 ? '수' : '');

@@ -6,15 +6,18 @@
 // 예를들어 arr이 [4,3,2,1]인 경우는 [4,3,2]를 리턴 하고, 
 // [10]면 [-1]을 리턴 합니다.
 
-const arr = [4, 3, 2, 1];
+const arr = [1,2,3,4];
 
 function solution (arr) {
-    const target = arr.sort((a, b) => b - a).slice(-1)
-    const answer = arr.filter((item) => item !== target[0])
-    return answer == ''
-    ? [-1]
-    : answer
+    const target = Math.min(...arr)
+    const answer = arr.filter((item) => item !== target)
+    return answer == '' ? [-1] : answer
 }
 
 console.log(solution(arr))
 
+function solution2(arr) {
+    arr.splice(arr.indexOf(Math.min(...arr)),1);
+    if(arr.length<1)return[-1];
+    return arr;
+}

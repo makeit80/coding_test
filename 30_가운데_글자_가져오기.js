@@ -3,15 +3,24 @@
 // 단어의 길이가 짝수라면 
 // 가운데 두글자를 반환하면 됩니다.
 
-const s = "aeerrs";
+const s = "aeesdadsrs";
 
 function solution (s) {
     const i = s.length / 2
-    console.log(s.length / 2)
-    console.log(s.slice(i-1, i+1))
-    return s % 2 === 0
+    return s.length % 2 === 0
     ? s.slice(i-1, i+1)
     : s.substring(Math.floor(i), Math.ceil(i))
 }
 
 console.log(solution(s))
+
+
+
+// 다른 사람의 풀이
+function solution(s) {
+    const mid = Math.floor(s.length/2);
+    return s.length %2 === 1 ? s[mid] : s[mid-1]+s[mid];
+}
+
+
+
